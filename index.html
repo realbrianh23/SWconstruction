@@ -153,15 +153,21 @@
     position:relative;
     display:flex;align-items:center;justify-content:center;
   }
-  .hero-art .logo-card{
+  .hero-art .hero-photo-frame{
     background:rgba(255,255,255,.08);
     border:1px solid rgba(255,255,255,.18);
     border-radius:28px;
-    padding:36px;
+    padding:14px;
     backdrop-filter:blur(6px);
     box-shadow:0 30px 60px -20px rgba(0,0,0,.45);
   }
-  .hero-art img{width:100%;max-width:340px;margin:0 auto;}
+  .hero-art .hero-photo-frame img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+    max-height:460px;
+    object-fit:cover;
+  }
 
   /* ---------- Marquee / trust bar ---------- */
   .trustbar{
@@ -220,19 +226,6 @@
   .about-list svg{color:var(--teal);flex-shrink:0;margin-top:2px;}
 
   /* ---------- Gallery ---------- */
-  .gallery-tabs{
-    display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px;
-  }
-  .gallery-tab{
-    border:1px solid var(--line);background:#fff;color:var(--navy);
-    padding:11px 22px;border-radius:999px;font-weight:600;font-size:.9rem;
-    cursor:pointer;transition:all .18s ease;
-  }
-  .gallery-tab:hover{border-color:var(--teal);color:var(--teal);}
-  .gallery-tab.active{
-    background:linear-gradient(135deg,var(--teal),var(--navy));
-    color:#fff;border-color:transparent;
-  }
   .gallery-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -394,7 +387,7 @@
     .process-grid{grid-template-columns:repeat(2,1fr);}
     .hero-grid{grid-template-columns:1fr;}
     .hero-art{order:-1;}
-    .hero-art .logo-card{max-width:280px;margin:0 auto;}
+    .hero-art .hero-photo-frame{max-width:420px;margin:0 auto;}
     .contact-details{gap:26px;}
   }
   @media (max-width: 720px){
@@ -469,8 +462,8 @@
       </div>
     </div>
     <div class="hero-art">
-      <div class="logo-card">
-        <img src="images/logo-icon.png" alt="Seawater Construction Corp. wave and skyline emblem">
+      <div class="hero-photo-frame">
+        <img src="images/hero-main.jpg" alt="Seawater Construction Corp. project">
       </div>
     </div>
   </div>
@@ -543,10 +536,10 @@
 <section id="about" class="about">
   <div class="wrap about-grid">
     <div class="about-media">
-      <img src="images/custom-homes/IMG_2217.jpg" alt="Custom-built coastal home in Miami-Dade">
+      <img src="images/custom-homes/IMG_2217.jpg" alt="Seawater Construction Corp. project">
       <div class="badge">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg>
-        Custom home — Miami-Dade
+        Seawater Construction Corp.
       </div>
     </div>
     <div class="about-copy">
@@ -569,50 +562,37 @@
     <div class="section-head">
       <span class="eyebrow">Our Work</span>
       <h2>Recent projects</h2>
-      <p>Browse by category to see custom homes, remodels, and fencing projects across Miami-Dade.</p>
-    </div>
-
-    <div class="gallery-tabs">
-      <button class="gallery-tab active" data-filter="all">All Work</button>
-      <button class="gallery-tab" data-filter="custom-homes">Custom Homes</button>
-      <button class="gallery-tab" data-filter="remodels">Remodels</button>
-      <button class="gallery-tab" data-filter="fencing">Fencing</button>
+      <p>A look at finished work across Miami-Dade. Click any photo or video to view it larger.</p>
     </div>
 
     <div class="gallery-grid" id="galleryGrid">
-
-      <!-- Custom Homes -->
-      <a href="images/custom-homes/IMG_2217.jpg" class="gwide gtall item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_2217.jpg" alt="Custom coastal home exterior"></a>
-      <a href="images/custom-homes/IMG_4361.jpg" class="gtall item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_4361.jpg" alt="Custom home exterior with palm trees"></a>
-      <a href="images/custom-homes/IMG_8692.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_8692.jpg" alt="Custom home under construction"></a>
-      <a href="images/custom-homes/IMG_8902.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_8902.jpg" alt="Custom home construction progress"></a>
-      <a href="images/custom-homes/IMG_8896.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_8896.jpg" alt="Custom home exterior stairs"></a>
-      <a href="images/custom-homes/IMG_8906.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_8906.jpg" alt="Custom home waterfront patio"></a>
-      <a href="images/custom-homes/IMG_3409.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_3409.jpg" alt="Custom home interior"></a>
-      <a href="images/custom-homes/IMG_3410.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_3410.jpg" alt="Custom home living space"></a>
-      <a href="images/custom-homes/IMG_3411.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_3411.jpg" alt="Custom home living area"></a>
-      <a href="images/custom-homes/IMG_3413.jpg" class="item" data-cat="custom-homes"><span class="tag">Custom Homes</span><img src="images/custom-homes/IMG_3413.jpg" alt="Custom home interior detail"></a>
-
-      <!-- Remodels -->
-      <a href="images/remodels/gallery-white-kitchen.jpg" class="gwide gtall item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-white-kitchen.jpg" alt="Modern white kitchen remodel"></a>
-      <a href="images/remodels/gallery-marble-bath.jpg" class="gtall item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-marble-bath.jpg" alt="Marble bathroom remodel with vessel sink"></a>
-      <a href="images/remodels/gallery-bathtub.jpeg" class="item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-bathtub.jpeg" alt="Freestanding bathtub installation"></a>
-      <a href="images/remodels/gallery-vanity.jpeg" class="item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-vanity.jpeg" alt="Double vanity bathroom remodel"></a>
-      <a href="images/remodels/gallery-brown-kitchen.jpeg" class="item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-brown-kitchen.jpeg" alt="Waterfront kitchen renovation"></a>
-      <a href="images/remodels/gallery-livingroom.jpeg" class="item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-livingroom.jpeg" alt="Open concept living and dining renovation"></a>
-      <a href="images/remodels/gallery-house-exterior.jpeg" class="item" data-cat="remodels"><span class="tag">Remodels</span><img src="images/remodels/gallery-house-exterior.jpeg" alt="Completed home exterior remodel"></a>
-
-      <!-- Fencing -->
-      <a href="videos/fencing-project.mp4" class="gwide gtall item video-item" data-cat="fencing" data-video="1"><span class="tag">Fencing</span><span class="play"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="#123a63"><path d="M8 5v14l11-7z"/></svg></span></span><img src="videos/fencing-poster.jpg" alt="Aluminum fencing project video"></a>
-      <a href="images/fencing/IMG_7843.jpg" class="gtall item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_7843.jpg" alt="Black aluminum fencing around pool"></a>
-      <a href="images/fencing/IMG_7840.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_7840.jpg" alt="Aluminum fencing along waterfront"></a>
-      <a href="images/fencing/IMG_7853.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_7853.jpg" alt="Aluminum fence gate"></a>
-      <a href="images/fencing/IMG_2897.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_2897.jpg" alt="Black aluminum fence in yard"></a>
-      <a href="images/fencing/IMG_3406.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_3406.jpg" alt="Aluminum fence line"></a>
-      <a href="images/fencing/IMG_9494.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_9494.jpg" alt="Aluminum fencing installation"></a>
-      <a href="images/fencing/IMG_9495.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_9495.jpg" alt="Aluminum fencing detail"></a>
-      <a href="images/fencing/IMG_9499.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/IMG_9499.jpg" alt="Aluminum fencing finished project"></a>
-      <a href="images/fencing/fence-detail.jpg" class="item" data-cat="fencing"><span class="tag">Fencing</span><img src="images/fencing/fence-detail.jpg" alt="Aluminum fence close-up detail"></a>
+      <a href="images/custom-homes/IMG_2217.jpg" class="gwide gtall item"><img src="images/custom-homes/IMG_2217.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_4361.jpg" class="gtall item"><img src="images/custom-homes/IMG_4361.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_8692.jpg" class="item"><img src="images/custom-homes/IMG_8692.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_8902.jpg" class="item"><img src="images/custom-homes/IMG_8902.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_8896.jpg" class="item"><img src="images/custom-homes/IMG_8896.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_8906.jpg" class="item"><img src="images/custom-homes/IMG_8906.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_3409.jpg" class="item"><img src="images/custom-homes/IMG_3409.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_3410.jpg" class="item"><img src="images/custom-homes/IMG_3410.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_3411.jpg" class="item"><img src="images/custom-homes/IMG_3411.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/custom-homes/IMG_3413.jpg" class="item"><img src="images/custom-homes/IMG_3413.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-white-kitchen.jpg" class="gwide gtall item"><img src="images/remodels/gallery-white-kitchen.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-marble-bath.jpg" class="gtall item"><img src="images/remodels/gallery-marble-bath.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-bathtub.jpeg" class="item"><img src="images/remodels/gallery-bathtub.jpeg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-vanity.jpeg" class="item"><img src="images/remodels/gallery-vanity.jpeg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-brown-kitchen.jpeg" class="item"><img src="images/remodels/gallery-brown-kitchen.jpeg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-livingroom.jpeg" class="item"><img src="images/remodels/gallery-livingroom.jpeg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/remodels/gallery-house-exterior.jpeg" class="item"><img src="images/remodels/gallery-house-exterior.jpeg" alt="Seawater Construction Corp. project"></a>
+      <a href="videos/fencing-project.mp4" class="gwide gtall item video-item" data-video="1"><span class="play"><span><svg width="20" height="20" viewBox="0 0 24 24" fill="#123a63"><path d="M8 5v14l11-7z"/></svg></span></span><img src="videos/fencing-poster.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_7843.jpg" class="gtall item"><img src="images/fencing/IMG_7843.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_7840.jpg" class="item"><img src="images/fencing/IMG_7840.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_7853.jpg" class="item"><img src="images/fencing/IMG_7853.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_2897.jpg" class="item"><img src="images/fencing/IMG_2897.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_3406.jpg" class="item"><img src="images/fencing/IMG_3406.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_9494.jpg" class="item"><img src="images/fencing/IMG_9494.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_9495.jpg" class="item"><img src="images/fencing/IMG_9495.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/IMG_9499.jpg" class="item"><img src="images/fencing/IMG_9499.jpg" alt="Seawater Construction Corp. project"></a>
+      <a href="images/fencing/fence-detail.jpg" class="item"><img src="images/fencing/fence-detail.jpg" alt="Seawater Construction Corp. project"></a>
 
     </div>
   </div>
@@ -711,7 +691,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo-icon.png" alt="Seawater Construction Corp.">
+        <img src="images/logo-icon.png" alt="Seawater Construction Corp. logo">
         <b>Seawater Construction Corp.</b>
       </div>
       <div class="footer-links">
@@ -765,23 +745,7 @@
     });
   }
 
-  // gallery filter
-  const tabs = document.querySelectorAll('.gallery-tab');
   const items = document.querySelectorAll('#galleryGrid .item');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const filter = tab.dataset.filter;
-      items.forEach(item => {
-        if(filter === 'all' || item.dataset.cat === filter){
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-      });
-    });
-  });
 
   // lightbox for images + video
   const lightbox = document.getElementById('lightbox');
